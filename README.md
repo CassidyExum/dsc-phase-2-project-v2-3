@@ -25,3 +25,25 @@ The first model only has a validation score of .48, so there was a lot of work t
 
 ## Iteration
 
+The second model dropped features I believed to be unnecessary. This list was:
+
+to_drop = ['id', 'lat', 'long', 'yr_built', 'zipcode']
+
+After dropping these features the second model had a validation score of .52.
+
+The third iteration features were chosen by running an Ordinary Least Squares model on the previous training data, and selecting only the significant features, i.e. p>|t|. This resulted in chosing significant_features = ['bedrooms', 'sqft_living', 'floors', 'sqft_above', 'sqft_lot15']. The third iteration scored worse, at .51.
+
+The fourth model used Recursive Feature Elimination to select what features to use. 
+The chosen features were fs_chosen_features = ['bedrooms', 'sqft_living', 'floors', 'sqft_above', 'sqft_living15', 'sqft_lot15']
+The fourth model scored .52, which was the same as the second model.
+
+## Eliminating Outliars and Trying Again
+
+At this point I realized that using the entire dataset was probably throwing things off. 52% is no better than flipping a coin. I decided to limit the data down to 0 < x < 2,500,000 price, rather than all the way up to the max (roughly 8,000,000). The first model done with this used every features (suggested from Recursive Feature Selection), and resulted in a score of .64. This is the best score so far. I made an attempt to iterate on this approach, and limit outliars further. The 75th percentile was around 800,000 price, so I chose 1,000,000 as the cutoff point. I once again used Recursive Feature Selection, used the features offered, and obtained a worse score of .62.
+
+With this result I decided that the .64 was a good stopping point.
+
+## Future testing
+
+In the future, creating a loop to change the maximum house price, limit the features to only numerical only, run Recursive Feature Selection, and then create the regression model and store the results would be a good stopping point to ensure higher accuracy.
+
