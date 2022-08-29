@@ -90,5 +90,6 @@ I also attempted a few other tests. Both tests were attempting to learn about re
 ├──.gitignore
 ├── Project 2 presentation.pdf
 ├── README.md
-└── student.ipynd
+├── student.ipynd
+└── student.pdf
 
