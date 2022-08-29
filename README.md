@@ -86,11 +86,9 @@ I also attempted a few other tests. Both tests were attempting to learn about re
 ## Repository Structure
 
 ```
-├── Images
 ├── data
 ├──.gitignore
+├── Project 2 presentation.pdf
 ├── README.md
-├── student.ipynd
-├── notebook.pdf
-└── presentation.txt
+└── student.ipynd
 
