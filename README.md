@@ -74,11 +74,23 @@ The R Squared value of this model was also .71.
 ## Coefficients and Business Decisions
 
 <img width="304" alt="Screen Shot 2022-08-29 at 6 33 17 PM" src="https://user-images.githubusercontent.com/104473048/187310574-26f022b2-5e9e-4740-b948-200e56109d17.png">
-The image above is of the coefficients of the final model. With these we can make some reccomendations based on two of the impoartant features, square foot of the living space (sqft_living) and grade. Every 1 square foot you increase in the living space of the house, the price will go up by \\$123. For every grade you increase in the house (i.e. increase the design, look, construction), the price will go up by \\$96,752 
+
+The image above is of the coefficients of the final model. With these we can make some recommendations based on two of the important features, square foot of the living space (sqft_living) and grade. Every 1 square foot you increase in the living space of the house, the price will go up by $123. For every grade you increase in the house (i.e. increase the design, look, construction), the price will go up by $96,752 
 
 ## Future testing
 
 In the future, creating a loop to change the maximum house price, limit the features to only numerical only, run Recursive Feature Selection, and then create the regression model and store the results would be a good stopping point to ensure higher accuracy.
 
 I also attempted a few other tests. Both tests were attempting to learn about renovations and how they impact price. I first tried using the assumption that a renovation would increase the grade of the house by 1. So create a model that trains before adding 1 to grade, then testing after. Grade wasn't a good enough predictor and I lacked the ability to properly create the model. The second attempt was separating the data by the median renovated year (after dropping all houses that haven't been renovated). This left me with only 750ish data points. From here I wanted to find groups of similar sized houses (sqft_lot or sqft_living) and compare those houses depending on the recency of the renovation. I struggled to organize the data to accomplish this, and 750 data points felt too low.
+
+## Repository Structure
+
+```
+├── Images
+├── data
+├──.gitignore
+├── README.md
+├── student.ipynd
+├── notebook.pdf
+└── presentation.txt
 
