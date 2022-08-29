@@ -69,6 +69,13 @@ At this point I realized that using the entire dataset was probably throwing thi
 
 With this result I decided that the .71 was a good stopping point.
 
+The R Squared value of this model was also .71.
+
+## Coefficients and Business Decisions
+
+<img width="304" alt="Screen Shot 2022-08-29 at 6 33 17 PM" src="https://user-images.githubusercontent.com/104473048/187310574-26f022b2-5e9e-4740-b948-200e56109d17.png">
+The image above is of the coefficients of the final model. With these we can make some reccomendations based on two of the impoartant features, square foot of the living space (sqft_living) and grade. Every 1 square foot you increase in the living space of the house, the price will go up by \\$123. For every grade you increase in the house (i.e. increase the design, look, construction), the price will go up by \\$96,752 
+
 ## Future testing
 
 In the future, creating a loop to change the maximum house price, limit the features to only numerical only, run Recursive Feature Selection, and then create the regression model and store the results would be a good stopping point to ensure higher accuracy.
