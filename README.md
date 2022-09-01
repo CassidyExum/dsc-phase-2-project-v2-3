@@ -84,6 +84,8 @@ In the future, creating a loop to change the maximum house price, limit the feat
 
 I also attempted a few other tests. Both tests were attempting to learn about renovations and how they impact price. I first tried using the assumption that a renovation would increase the grade of the house by 1. So create a model that trains before adding 1 to grade, then testing after. Grade wasn't a good enough predictor and I lacked the ability to properly create the model. The second attempt was separating the data by the median renovated year (after dropping all houses that haven't been renovated). This left me with only 750ish data points. From here I wanted to find groups of similar sized houses (sqft_lot or sqft_living) and compare those houses depending on the recency of the renovation. I struggled to organize the data to accomplish this, and 750 data points felt too low.
 
+[Presentation Link](https://github.com/CassidyExum/dsc-phase-2-project-v2-3/blob/main/Project%202%20presentation.pdf)
+
 ## Repository Structure
 
 ```
